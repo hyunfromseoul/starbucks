@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더부분 */
+.header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background: #fff;
+    width: 100vw;
+    z-index: 100;
+}
+
+.header .logo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin-right: 7.5rem;
+}
+
+.header .header-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 20vh;
+}
+
+.header .nav-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-nav {
+    font-size: 12px;
+}
+
+.nav {
+    font-size: 14px;
+}
+
+.sub-nav ul, .nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+
+.sub-nav ul li, .nav ul li {
+    margin: 1rem;
+}
+
+.sub-nav ul li a, .nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.sub-nav ul li {
+    border-right: 1px solid wheat;
+    padding-right: 1rem;
+}
+
+.sub-nav ul li:last-child, .sub-nav ul li:nth-last-child(2) {
+    border-right: none;
+    padding-right: 0;
+}
+
+.nav ul li {
+    padding: 0 1rem 1rem 1rem;
+    line-height: 20px;
+}
+
+.nav ul li a:hover {
+    background: transparent;
+    text-decoration: underline;
+    color: olive;
+}
+
+.a-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2021/2021_summer1_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px 150px;
+}
+
+.a-container .beverage-wrap .beverage {
+    width:  30%;
+    position: relative;
+    background: transparent;
+}
+
+.a-container .beverage-wrap {
+    z-index: 1;
+}
+
+.a-container .beverage-wrap .beverage.bev1 {
+    left: 25%;
+    top: 5rem;
+}
+
+.a-container .beverage-wrap .beverage.bev2 {
+    left: 15%;
+    width: 39%;
+    top: 6rem;
+}
+
+.a-container .beverage-wrap .beverage.bev3 {
+    left: -5%;
+    top: 6rem;
+}
+
+.a-container .beverage-wrap .beverage:nth-child(2) {
+    margin-bottom: 5.5rem;
+}
+
+.a-container .a-wrap {
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10rem;
+    padding-top: 3rem;
+    
+    
+}
+
+.a-container .a-wrap button {
+    width: 6rem;
+    margin-top: 1rem;
+}
+
+.a-bottom {
+    width: 100%;
+    display: flex;
+    height: 10vh;
+}
+
+.a-bottom .side-left, .side-right {
+    display: flex;
+    align-items: center;
+}
+
+.a-bottom .side-left {
+    width: 55%;
+    box-shadow: 1px 0px 1px gray;
+}
+
+.a-bottom .side-right {
+    width: 45%;
+}
+
+
+.a-bottom .side-left {
+    justify-content: space-around;
+    background-color: black;
+    color: #fff;
+}
+
+.a-bottom .notice-main {
+    position: relative;
+    left: -5rem;
+    cursor: pointer;
+}
+
+.a-bottom .notice-main:hover {
+    text-decoration: underline;
+}
+
+.a-bottom .side-left button {
+    border:none;
+    background-color: transparent;
+}
+
+.a-bottom .side-left button a {
+    color: #fff;
+    font-size: 40px;
+    padding: 0px 10px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.a-bottom .side-right {
+    justify-content: center;
+}
+.a-bottom .side-right .wrap, .a-bottom .side-right button {
+    cursor: pointer;
+}
+
+.a-bottom .side-right button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 0px 5px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-left: 5rem;
+}
+
+.rewards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background:darkslategrey;
+    color: white;
+    height: 40vh;
+}
+
+.rewards img {
+    background-color: #efefef;
+    margin-right: 2rem;
+    height: 80%;
+}
+
+.rewards .rewards-info {
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid gray;
+}
+
+.rewards .rewards-info .info-wrap {
+    display: flex;
+    justify-content:center;
+    
+}
+.rewards .rewards-info .info-wrap p {
+    flex: 1;    
+    width: 100%;
+    font-size: 18px;
+}
+
+.rewards .rewards-info .button-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.rewards .rewards-info .button-wrap button {
+    border: none;
+    margin: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.rewards .rewards-info .button-wrap .signUp {
+    background-color: green;
+    border-radius: 5px;
+    height: 2.5rem;
+    width: 6rem;
+}
+.rewards .rewards-info .button-wrap .signIn {
+    background-color: transparent;
+    border: 1px #fff solid;
+    height: 2.5rem;
+    width: 6rem;
+    border-radius: 5px;
+}
+
+.rewards .rewards-info .button-wrap .signIn:hover,
+ .rewards .rewards-info .button-wrap .signUp:hover,
+ .rewards .e-info button:hover {
+    text-decoration: underline;
+}
+
+
+.rewards .e-info {
+    display: flex;
+    align-items: center;
+}
+
+.rewards .e-info p {
+    flex: 1;
+    font-size: 14px;
+}
+
+.rewards .e-info button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: 1px #fff solid;
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 5px;
+}
