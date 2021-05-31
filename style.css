@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* 헤더부분 */
@@ -15,22 +16,20 @@ body {
     background: #fff;
     width: 100vw;
     z-index: 100;
-    height: 17.5vh;
+    height: 20vh;
 }
 
-.header .logo {
-    position: relative;
-    width: 100px;
-    height: 100px;
+.header .header-wrap a {
     cursor: pointer;
-    margin-right: 7.5rem;
+    width: 75px;
+    height: 75px;
 }
 
 .header .header-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 80vw;
+    width: 90vw;
 }
 
 .header .nav-wrap {
@@ -39,9 +38,10 @@ body {
 }
 
 .sub-nav {
-    font-size: 12px;
+    font-size: 13px;
     display: flex;
     justify-content: center;
+    height: 8vh;
 }
 
 .nav {
@@ -57,17 +57,51 @@ body {
 
 .sub-nav ul li a, .nav ul li a {
     padding: 1rem;
-
-}
-
-.sub-nav ul li a, .nav ul li a {
     text-decoration: none;
     color: black;
+    white-space: nowrap;
+}
+
+.sub-nav ul {
+    align-items: center;
+}
+
+.nav ul li a {
+    padding-bottom: 2.2rem;
+    margin: 0;
 }
 
 .sub-nav ul li {
     border-right: 1px solid wheat;
-    margin: 0.5rem;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+}
+
+.sub-nav .search-wrap {
+    border: 1px gray solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sub-nav .search-wrap .search-input {
+    width: 0px;
+    height: 22px;
+    left: 0;
+    top: 5px;
+    background: none;
+    border: none;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.sub-nav .search-wrap #search-input.active {
+    visibility: visible;
+    padding: 0 10px;
+    width: 123px;
+}
+
+.sub-nav ul li .search {
+    cursor: pointer;
+    height: 22px;
 }
 
 .sub-nav ul li:last-child, .sub-nav ul li:nth-last-child(2) {
@@ -77,40 +111,56 @@ body {
 
 .nav ul li {
     padding: 0 1rem 0rem 1rem;
-    line-height: 20px;
 }
 
-
-/* .nav ul li a:hover {
-    background: #2C2A29;
-    text-decoration: underline;
-    color: olive;
-} */
 .nav ul li:hover a {
     background: #2C2A29;
     color: olive;
     z-index: 105;
+    
 }
 
 .nav-dropdown {
-    display: none;
-    transition: height 0.3s ease-in-out;
+    visibility: hidden;
+    height: 0;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 20vh;
+    width: 100vw;
+    font-size: 12px;
+    background: #2C2A29;
+    color: gray;
+    z-index: 100;
 }
 
+.nav-dropdown.active {
+    visibility: visible;
+    height: 70%;
+}
 .nav-dropdown.active .dropdown-bottom {
+    visibility: visible;
+    height: 17vh;
+}
+
+.nav-dropdown .dropdown-bottom {
     position: fixed;
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: #1E3932;
     width: 100vw;
-    height: 17.5vh;
-    bottom: 12%;
+    height: 0;
+    bottom: 9.5%;
     z-index: 105;
     padding-left: 9.5rem;
     font-size: 12px;
     line-height: 2px;
 }
+
 
 .nav-dropdown.active .dropdown-bottom h3 {
     cursor: pointer;
@@ -123,19 +173,6 @@ body {
     margin-bottom: 0.75rem;
 }
 
-.nav-dropdown.active {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    position: fixed;
-    top: 17.5vh;
-    width: 100vw;
-    height: 70%;
-    font-size: 12px;
-    background: #2C2A29;
-    color: gray;
-    z-index: 100;
-}
 
 .dropdown-wrap {
     display: flex;
@@ -145,11 +182,10 @@ body {
     margin-top: 1.5rem;
 }
 
-.nav-dropdown ul {
+.nav-dropdown ul{
     list-style-type: none;
     margin: 0rem 2.4rem;
 }
-
 
 .nav-dropdown ul li:first-child {
     font-size: 14px;
