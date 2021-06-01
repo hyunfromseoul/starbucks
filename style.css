@@ -131,8 +131,8 @@ body {
 }
 
 .nav-dropdown {
-    visibility: hidden;
     height: 0;
+    visibility: hidden;
     transition: 0.3s ease-in-out;
     display: flex;
     justify-content: center;
@@ -587,6 +587,103 @@ body {
     background-color: #815A32;
     color: #fff;
     text-decoration: underline;
+}
+
+.c-container {
+    background: url(./img/fav-bg.jpg) center center fixed no-repeat #45434c;
+    height: 800px;
+    padding: 0;
+    position: relative;
+    background-size: auto 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-container .left-wrap {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-end;
+    top: -10%;
+}
+
+.c-container .left-wrap img {
+    margin-bottom: 3rem;
+}
+
+.c-container .left-wrap .c-button {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 0.5rem 1.25rem;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.c-container .left-wrap .c-button:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--charcoal);
+    text-decoration: underline;
+}
+
+
+.c-container .right-wrap {
+    position: relative;
+    right: -10%;
+    top: -10%;
+}
+
+.d-container {
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+}
+
+.d-container .left-wrap {
+    position: relative;
+    width: 38.5%;
+    padding-left: 3.5%;
+    background-color: transparent;
+}
+
+.d-container .right-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 9%;
+}
+
+.d-container .right-wrap img:first-child {
+    margin-top: 6rem;
+}
+.d-container .right-wrap img:last-child {
+    width: 46%;
+    margin-bottom: 3rem;
+}
+
+.d-container::before {
+    content: "";
+    position: absolute;
+    top: 61.8%;
+    left: 9.5%;
+    width: 95.3%;
+    height: 1px;
+    background-color: #cccccb;
+}
+.d-container::after {
+    content: "";
+    position: absolute;
+    left: 44%;
+    top: 136px;
+    width: 1px;
+    height: 64%;
+    background-color: #cccccb;
 }
 
 @keyframes visibilityAnim {
