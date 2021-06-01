@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+:root {
+    --deep-green: #1E3932;
+    --charcoal: #2C2A29;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 /* 헤더부분 */
@@ -13,23 +21,25 @@ body {
     display: flex;
     justify-content: center;
     position: fixed;
-    background: #fff;
+    background: #F6F5EF;
+    border-top: 2px solid black;
     width: 100vw;
     z-index: 100;
     height: 20vh;
 }
 
-.header .header-wrap a {
+.header .header-wrap a .logo {
     cursor: pointer;
     width: 75px;
     height: 75px;
+    margin-left: 1rem;
 }
 
 .header .header-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90vw;
+    width: 80vw;
 }
 
 .header .nav-wrap {
@@ -67,7 +77,7 @@ body {
 }
 
 .nav ul li a {
-    padding-bottom: 2.2rem;
+    padding-bottom: 1.9rem;
     margin: 0;
 }
 
@@ -114,7 +124,7 @@ body {
 }
 
 .nav ul li:hover a {
-    background: #2C2A29;
+    background: var(--charcoal);
     color: olive;
     z-index: 105;
     
@@ -131,7 +141,7 @@ body {
     top: 20vh;
     width: 100vw;
     font-size: 12px;
-    background: #2C2A29;
+    background: var(--charcoal);
     color: gray;
     z-index: 100;
 }
@@ -151,7 +161,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #1E3932;
+    background-color: var(--deep-green);
     width: 100vw;
     height: 0;
     bottom: 9.5%;
@@ -206,7 +216,7 @@ body {
 .hyundai-card {
     position: fixed;
     left: auto;
-    right: 1%;
+    right: 5%;
     top: 154px;
     cursor: pointer;
     z-index: 999;
@@ -220,14 +230,15 @@ body {
     height: 100vh;
     background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2021/2021_summer1_bg.jpg');
     background-repeat: no-repeat;
-    background-position: 0px 100px;
+    background-position: -40px 140px;
+    background: 99% cover;
 }
 
 .a-container .beverage-wrap .beverage {
     width:  25%;
     position: absolute;
     background: transparent;
-    animation: visibilityAnim 3s forwards;
+    animation: visibilityAnim 1.5s forwards;
     opacity: 0;
 }
 
@@ -237,33 +248,72 @@ body {
 
 .a-container .beverage-wrap .beverage.bev1 {
     left: 40%;
-    bottom: 5%;
+    bottom: 4.5%;
     animation-delay: 1s;
 }
 
 .a-container .beverage-wrap .beverage.bev2 {
     left: 56%;
-    bottom: 15%;
+    bottom: 12%;
     width: 30%;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
 }
 
 .a-container .beverage-wrap .beverage.bev3 {
-    right: 5%;
-    bottom: 3%;
-    animation-delay: 3s;
+    right: 4%;
+    bottom: 3.5%;
+    animation-delay: 2s;
 }
+
+
+/* 음료 이미지 가상요소 */
+.a-container .beverage-wrap .beverage.bev1::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -30%;
+    left: 2.5%;
+    background: url(./img/coldbrew.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.a-container .beverage-wrap .beverage.bev2::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 150px;
+    left: -5%;
+    background: url(./img/dark-choco.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.a-container .beverage-wrap .beverage.bev3::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -26%;
+    left: 2.5%;
+    background: url(./img/muscat-ade.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 .a-container .a-wrap {
     position: absolute;
-    left: 16%;
-    
+    left: 14%;
+    top: 26%;
+    animation: visibilityAnim 1.5s forwards;
 }
 
 .a-container .a-button {
     position: absolute;
-    left: 16.5%;
-    bottom: 17%;
+    left: 14.5%;
+    bottom: 15%;
     border: 1px solid black;
     border-radius: 5px;
     font-size: 14px;
@@ -271,6 +321,9 @@ body {
     background-color: transparent;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    opacity: 0;
+    animation: visibilityAnim 1.5s forwards;
+    animation-delay: 2.5s;
 }
 
 .a-container .a-button:hover {
@@ -350,15 +403,15 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background:#1E3932;
+    background:var(--deep-green);
     color: white;
     height: 40vh;
 }
 
 .rewards img {
-    background-color: #efefef;
+    background-color: transparent;
     margin-right: 2rem;
-    height: 80%;
+    height: 50%;
 }
 
 .rewards .rewards-info {
@@ -366,13 +419,18 @@ body {
     flex-direction: column;
     width: 55vw;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid gray;
+    border-bottom: 1px solid rgba(151, 150, 150, 0.5);
 }
 
 .rewards .rewards-info .info-wrap {
     display: flex;
     justify-content:center;
     
+}
+
+.rewards .rewards-info .info-title {
+    font-size: 26px;
+    margin: 0;
 }
 .rewards .rewards-info .info-wrap p {
     flex: 1;    
@@ -421,6 +479,8 @@ body {
 .rewards .e-info p {
     flex: 1;
     font-size: 14px;
+    line-height: 1.5rem;
+    margin: 0;
 }
 
 .rewards .e-info button {
@@ -432,6 +492,101 @@ body {
     height: 2.5rem;
     width: 10rem;
     border-radius: 5px;
+}
+
+.b-container {
+    
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.indonesia-bean {
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://image.istarbucks.co.kr/upload/common/img/main/2021/2021_summer1_bean_bg.jpg);
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.west-java {
+    max-width: 386px;
+    height: 77%;
+}
+
+.west-java-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.west-java-info p {
+    font-size: 18px;
+    color:rgba(0, 0, 0, 0.7);
+}
+
+.west-java-info .info {
+    color: #502C0B;
+    font-size: 20px;
+}
+
+.west-java-info .info.bold {
+    font-size: 30px;
+}
+
+.west-java-button {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 0.5rem 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.west-java-button:hover {
+    background-color: black;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.brazil-bean {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url('./img/brazil-bean.png');
+    background-color: #E8C6A0;
+    height: 70vh;
+}
+
+.brazil-bean-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    position: relative;
+    left: -20%;
+    bottom: -30%;
+}
+
+.brazil-bean-button {
+    position: relative;
+    color: #815A32;
+    border: 1px solid #815A32;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 0.5rem 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.brazil-bean-button:hover {
+    background-color: #815A32;
+    color: #fff;
+    text-decoration: underline;
 }
 
 @keyframes visibilityAnim {
