@@ -9,296 +9,373 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-wrap">
-            <a href="./index.html" aria-label="starbucks logo">
-                <img class="logo" src="./img/logo.png" alt="logo">
-            </a>
-            <div class="nav-wrap">
-                <nav class="sub-nav">
-                    <ul>
-                        <li><a href="#">Sign In</a></li>
-                        <li><a href="#">My Starbucks</a></li>
-                        <li><a href="#">Customer Service & Ideas</a></li>
-                        <li><a href="#">Find A Store</a></li>
-                        <li><div class="search-wrap"><input type="search" id="search-input" class="search-input" placeholder="통합검색"><span class="search">🔍</span></div></li>
-                    </ul>
-                </nav>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="#" class="nav-coffee">COFFEE</a></li>
-                        <li><a href="#" class="nav-menu">MENU</a></li>
-                        <li><a href="#" class="nav-store">STORE</a></li>
-                        <li><a href="#" class="nav-res">RESPONSIBILITY</a></li>
-                        <li><a href="#" class="nav-rewards">STARBUCKS REWARDS</a></li>
-                        <li><a href="#" class="nav-new">WHAT'S NEW</a></li>
-                    </ul>
-                </nav>
+    <div class="wrap-all">
+        <header class="header">
+            <div class="header-wrap">
+                <div class="logo">
+                    <a href="./index.html" aria-label="starbucks logo">
+                        <img class="logo-img" src="./img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="nav-wrap">
+                    <nav class="sub-nav">
+                        <ul>
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">My Starbucks</a></li>
+                            <li><a href="#">Customer Service & Ideas</a></li>
+                            <li><a href="#">Find A Store</a></li>
+                            <li><div class="search-wrap"><input type="search" id="search-input" class="search-input" placeholder="통합검색"><span class="search">🔍</span></div></li>
+                        </ul>
+                    </nav>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="#" class="nav-coffee">COFFEE</a></li>
+                            <li><a href="#" class="nav-menu">MENU</a></li>
+                            <li><a href="#" class="nav-store">STORE</a></li>
+                            <li><a href="#" class="nav-res">RESPONSIBILITY</a></li>
+                            <li><a href="#" class="nav-rewards">STARBUCKS REWARDS</a></li>
+                            <li><a href="#" class="nav-new">WHAT'S NEW</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-        </div>
-    </header>
-    <div class="dropdown-container">
-
-        <div class="nav-dropdown drop-1">
-            <div class="dropdown-wrap">
-                <ul class="coffee">
-                    <li>커피</li>
-                    <li>스타벅스 원두</li>
-                    <li>스타벅스 비아</li>
-                    <li>스타벅스 오리가미</li>
-                </ul>
-    
-                <ul class="coffe-n-me">
-                    <li>나와 어울리는 커피</li>
-                </ul>
-        
-                <ul class="reserve">
-                    <li>스타벅스 리저브</li>
-                    <li>RESERVE MAGAZINE</li>
-                </ul>
-        
-                <ul class="espresso">
-                    <li>에스프레소 음료</li>
-                    <li>도피오</li>
-                    <li>에스프레소 마키아또</li>
-                    <li>아메리카노</li>
-                    <li>마키아또</li>
-                    <li>카푸치노</li>
-                    <li>라떼</li>
-                    <li>모카</li>
-                    <li>리스트레또 비안코</li>
-                </ul>
-        
-                <ul class="enjoy">
-                    <li>최상의 커피를 즐기는 법</li>
-                    <li>커피 프레스</li>
-                    <li>푸어 오버</li>
-                    <li>아이스 푸어 오버</li>
-                    <li>커피 메이커</li>
-                    <li>리저브를 매장에서 다양하게 즐기는 법</li>
-                </ul>
-    
-                <ul class="coffee-story">
-                    <li>커피 이야기</li>
-                    <li>스타벅스 로스트 스팩트럼</li>
-                    <li>최상의 아라비카 원두</li>
-                    <li>한 잔의 커피가 완성되기까지</li>
-                    <li>클로버 커피 추출 시스템</li>
-                    <li>스타벅스 디카페인</li>
-                </ul>
-            </div>
-            <div class="dropdown-bottom">
-                <h3>나와 어울리는 커피 찾기</h3>
-                <span>스타벅스가 여러분에게 어울리는 커피를 찾아드립니다.</span>
-                <h3>최상의 커피를 즐기는 법</h3>
-                <span>여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요.</span>
-            </div>
-        </div>
-        <div class="nav-dropdown drop-2"></div>
-        <div class="nav-dropdown drop-3"></div>
-        <div class="nav-dropdown drop-4"></div>
-        <div class="nav-dropdown drop-5"></div>
-        <div class="nav-dropdown drop-6"></div>
-    </div>
-
-    <div class="hyundai-card">
-        <img src="https://image.istarbucks.co.kr/upload/banner/floatingbnr/9vF68i_20210218134422111.png" alt="스타벅스 - 현대카드 PLCC" class="pc-badge">
-    </div>
-    <!-- 
-        1. 패럴랙스
-        2. 네비게이션+검색 펼쳐짐 + nav바 고정
-        3. 프로모션 펼쳐짐+슬라이드바
-        4. 스타벅스 현대카드 fixed
-     -->
-    <main class="main">
-        <div class="a-container">
-            <!-- 1개의 폰트이미지와 버튼, 3개의 음료 이미지와 음료 이름(한글+영어로) -->
+            <div class="dropdown-container">
+                <div class="nav-dropdown drop-1">
+                    <div class="dropdown-wrap">
+                        <ul>
+                            <li>커피</li>
+                            <li>스타벅스 원두</li>
+                            <li>스타벅스 비아</li>
+                            <li>스타벅스 오리가미</li>
+                        </ul>
             
-            <div class="a-wrap">
-                <img class="a-left" src="./img/a-1.png" alt="FIND YOUR TASTE, ONE WITH THE SUN">
-            </div>
-            <button class="a-button">자세히 보기</button>
-            <div class="beverage-wrap">
-                <div class="beverage bev1">
-                    <img class="" src="./img/a-2.png" alt="FOREST COLD BREW">
-                </div>
-                <div class="beverage bev2">
-                    <img class="" src="./img/a-3.png" alt="BANANA CREAM DARK CHOCO BLENDED">
-                </div>
-                <div class="beverage bev3">
-                    <img class="" src="./img/a-4.png" alt="SHINING MUSCAT ADE">
-                </div>
-            </div>
-        </div>
-        <div class="a-bottom">
-            <div class="side-left">
-                <span class="notice">공지사항</span>
-                <span class="notice-main active">시스템 개선 및 점검 안내</span>
-                <button><a href="#">+</a></button>
-            </div>
-            <div class="side-right">
-                <div class="wrap">
-                    <span>스타벅스 프로모션</span>
-                    <button><i class="fas fa-angle-down"></i></button>
-                </div>
-            </div>
-        </div>
-        <div class="rewards">
-            <!-- 회원가입/로그인 버튼 등 -->
-            <img src="./img/logo.png" alt="logo">
-            <div class="info-wrap">
-                <div class="rewards-info">
-                    <p class="info-title">스타벅스만의 특별한 혜택, <b>스타벅스 리워드</b></p>
-                    <div class="info-wrap">
-                        <p><b>스타벅스 회원이세요?</b> 로그인을 통해 나만의 리워드를 확인해보세요.<br/><b>스타벅스 회원이 아니세요?</b> 가입을 통해 리워드 혜택을 즐기세요.</p>
-                        <div class="button-wrap">
-                            <button class="signUp">회원가입</button>
-                            <button class="signIn">로그인</button>
+                        <ul>
+                            <li>나와 어울리는 커피</li>
+                        </ul>
+                
+                        <ul>
+                            <li>스타벅스 리저브</li>
+                            <li>RESERVE MAGAZINE</li>
+                        </ul>
+                
+                        <ul>
+                            <li>에스프레소 음료</li>
+                            <li>도피오</li>
+                            <li>에스프레소 마키아또</li>
+                            <li>아메리카노</li>
+                            <li>마키아또</li>
+                            <li>카푸치노</li>
+                            <li>라떼</li>
+                            <li>모카</li>
+                            <li>리스트레또 비안코</li>
+                        </ul>
+                
+                        <ul>
+                            <li>최상의 커피를 즐기는 법</li>
+                            <li>커피 프레스</li>
+                            <li>푸어 오버</li>
+                            <li>아이스 푸어 오버</li>
+                            <li>커피 메이커</li>
+                            <li>리저브를 매장에서 다양하게 즐기는 법</li>
+                        </ul>
+            
+                        <ul>
+                            <li>커피 이야기</li>
+                            <li>스타벅스 로스트 스팩트럼</li>
+                            <li>최상의 아라비카 원두</li>
+                            <li>한 잔의 커피가 완성되기까지</li>
+                            <li>클로버 커피 추출 시스템</li>
+                            <li>스타벅스 디카페인</li>
+                        </ul>
+                        <div class="dropdown-bottom">
+                            <div class="wrap">
+                                <h3>나와 어울리는 커피 찾기</h3>
+                                <span>스타벅스가 여러분에게 어울리는 커피를 찾아드립니다.</span>
+                                <h3>최상의 커피를 즐기는 법</h3>
+                                <span>여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <br/>
+                <div class="nav-dropdown drop-2">
+                    <div class="dropdown-wrap">
+                        <ul>
+                            <li>음료</li>
+                            <li>콜드 브루</li>
+                            <li>브루드 커피</li>
+                            <li>에스프레소</li>
+                            <li>프라푸치노</li>
+                            <li>블렌디드</li>
+                            <li>스타벅스 피지오</li>
+                            <li>티(티바나)</li>
+                            <li>기타 제조 음료</li>
+                            <li>스타벅스 주스(병음료)</li>
+                        </ul>
+            
+                        <ul>
+                            <li>푸드</li>
+                            <li>브레드</li>
+                            <li>케이크</li>
+                            <li>샌드위치 & 샐러드</li>
+                            <li>따뜻한 푸드</li>
+                            <li>과일 & 요거트</li>
+                            <li>스낵 & 미니 디저트</li>
+                            <li>아이스크림</li>
+                        </ul>
                 
-                <div class="e-info">
-                    <p>
-                        회원가입 후, 스타벅스 e-Gift Card를 <b>"나에게 선물하기"로 구매하시고, 편리하게 등록하세요!</b> <br/>
-                        카드를 등록하여 스타벅스 리워드 회원이 되신 후, 첫 구매를 하시면 무료 음료쿠폰을 드립니다!
-                    </p>
-                    <button>e-Gift Card 선물하기</button>
-                </div>
-            </div>
+                        <ul>
+                            <li>상품</li>
+                            <li>글라스</li>
+                            <li>플라스틱 텀블러</li>
+                            <li>스테인리스 텀블러</li>
+                            <li>보온병</li>
+                            <li>액세서리</li>
+                            <li>커피 용품</li>
+                            <li>패키지 티(티바나)</li>
+                            <li>스타벅스 플래너</li>
+                        </ul>
                 
-        </div>
-
-        <div class="b-container">
-            <!-- 상품 + 버튼, 상품 + 버튼 -->
-            <div class="indonesia-bean">
-                <img src="./img/indonesia-bean.png" alt="INDONESIA WEST JAVA BEAN" class="west-java">
-                <div class="west-java-info">
-                    <p class="info">여름의 시작을 함께할 <br/>
-                        <b class="info bold">인도네시아 웨스트 자바</b></p>
-                    <p>허브의 복합적인 풍미와 낮은 산미, <br/>
-                        은은하게 달콤한 바닐라향이 매력적인 원두</p>
-                    <button class="west-java-button">자세히 보기</button>
-                </div>
-            </div>
-
-            <div class="brazil-bean">
-                <div class="brazil-bean-wrap">
-                    <div class="brazil-bean-info">
-                        <img src="./img/brazil-bean-tag.png" alt="SUN-DRIED BRAZIL BEAN">
+                        <ul>
+                            <li>카드</li>
+                            <li>실물카드</li>
+                            <li>e-Gift 카드</li>
+                        </ul>
+                
+                        <ul>
+                            <li>메뉴 이야기</li>
+                            <li>나이트로 콜드브루</li>
+                            <li>콜드 브루</li>
+                            <li>스타벅스 티바나</li>
+                        </ul>
+            
+                        <ul>
+                            <li>커피 이야기</li>
+                            <li>스타벅스 로스트 스팩트럼</li>
+                            <li>최상의 아라비카 원두</li>
+                            <li>한 잔의 커피가 완성되기까지</li>
+                            <li>클로버 커피 추출 시스템</li>
+                            <li>스타벅스 디카페인</li>
+                        </ul>
+                        <div class="dropdown-bottom">
+                            <div class="wrap">
+                                <h3>나와 어울리는 커피 찾기</h3>
+                                <span>스타벅스가 여러분에게 어울리는 커피를 찾아드립니다.</span>
+                                <h3>최상의 커피를 즐기는 법</h3>
+                                <span>여러가지 방법을 통해 다양한 풍미의 커피를 즐겨보세요.</span>
+                            </div>
+                        </div>
                     </div>
-                    <button class="brazil-bean-button">자세히 보기</button>
+                </div>
+                
+                <div class="nav-dropdown drop-3"></div>
+                <div class="nav-dropdown drop-4"></div>
+                <div class="nav-dropdown drop-5"></div>
+                <div class="nav-dropdown drop-6"></div>
+            </div>
+        </header>
+    
+        <!-- 
+            1. 패럴랙스
+            2. 네비게이션+검색 펼쳐짐 + nav바 고정
+            3. 프로모션 펼쳐짐+슬라이드바
+            4. 스타벅스 현대카드 fixed
+         -->
+        <main class="main">
+            <div class="a-container">
+                <!-- 1개의 폰트이미지와 버튼, 3개의 음료 이미지와 음료 이름(한글+영어로) -->
+                <div class="a-inner">
+                    <div class="a-wrap">
+                        <img class="a-left" src="./img/a-1.png" alt="FIND YOUR TASTE, ONE WITH THE SUN">
+                    </div>
+                    <button class="a-btn">
+                        <a href="#">자세히 보기</a>
+                    </button>
+                    <div class="beverage-wrap">
+                        <div class="beverage bev1">
+                            <img class="" src="./img/a-2.png" alt="FOREST COLD BREW">
+                        </div>
+                        <div class="beverage bev2">
+                            <img class="" src="./img/a-3.png" alt="BANANA CREAM DARK CHOCO BLENDED">
+                        </div>
+                        <div class="beverage bev3">
+                            <img class="" src="./img/a-4.png" alt="SHINING MUSCAT ADE">
+                        </div>
+                    </div>
+                    <div class="hyundai-card">
+                        <img src="https://image.istarbucks.co.kr/upload/banner/floatingbnr/9vF68i_20210218134422111.png" alt="스타벅스 - 현대카드 PLCC" class="pc-badge">
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- 패럴랙스 -->
-
-        <div class="c-container">
-            <!-- p 등장 애니메이션 -->
-            <div class="left-wrap">
-                <img class="c-pick" src="./img/pick-your.png" alt="PICK YOUR FAVORITE">
-                <img class="c-text" src="./img/fav-text.png" alt="TEXT">
-                <button class="c-button">자세히 보기</button>
+            <div class="a-bottom">
+                <div class="side-left">
+                    <span class="notice">공지사항</span>
+                    <span class="notice-main active">시스템 개선 및 점검 안내</span>
+                    <button><a href="#">+</a></button>
+                </div>
+                <div class="side-right">
+                    <div class="wrap">
+                        <span>스타벅스 프로모션</span>
+                        <button><i class="fas fa-angle-down"></i></button>
+                    </div>
+                </div>
             </div>
-
-            <div class="right-wrap">
-                <img class="c-product" src="./img/fav.png" alt="PRODUCT IMAGE">
+            <div class="rewards">
+                <!-- 회원가입/로그인 버튼 등 -->
+                <img src="./img/logo.png" alt="logo">
+                <div class="info-wrap">
+                    <div class="rewards-info">
+                        <p class="info-title">스타벅스만의 특별한 혜택, <b>스타벅스 리워드</b></p>
+                        <div class="info-wrap">
+                            <p><b>스타벅스 회원이세요?</b> 로그인을 통해 나만의 리워드를 확인해보세요.<br/><b>스타벅스 회원이 아니세요?</b> 가입을 통해 리워드 혜택을 즐기세요.</p>
+                            <div class="button-wrap">
+                                <button class="signUp">회원가입</button>
+                                <button class="signIn">로그인</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    
+                    <div class="e-info">
+                        <p>
+                            회원가입 후, 스타벅스 e-Gift Card를 <b>"나에게 선물하기"로 구매하시고, 편리하게 등록하세요!</b> <br/>
+                            카드를 등록하여 스타벅스 리워드 회원이 되신 후, 첫 구매를 하시면 무료 음료쿠폰을 드립니다!
+                        </p>
+                        <button>e-Gift Card 선물하기</button>
+                    </div>
+                </div>
+                    
             </div>
-
-            <img src="" alt="">
-        </div>
-
-        <div class="d-container">
-            <!-- 온라인 매거진 ~ 푸터 전까지 -->
-            <div class="left-wrap">
-                <img src="./img/reserve-visual.png" alt="starbucks reserve">
+    
+            <div class="b-container">
+                <!-- 상품 + 버튼, 상품 + 버튼 -->
+                <div class="indonesia-bean">
+                    <img src="./img/indonesia-bean.png" alt="INDONESIA WEST JAVA BEAN" class="west-java">
+                    <div class="west-java-info">
+                        <p class="info">여름의 시작을 함께할 <br/>
+                            <b class="info bold">인도네시아 웨스트 자바</b></p>
+                        <p>허브의 복합적인 풍미와 낮은 산미, <br/>
+                            은은하게 달콤한 바닐라향이 매력적인 원두</p>
+                        <button class="west-java-button">자세히 보기</button>
+                    </div>
+                </div>
+    
+                <div class="brazil-bean">
+                    <div class="brazil-bean-wrap">
+                        <div class="brazil-bean-info">
+                            <img src="./img/brazil-bean-tag.png" alt="SUN-DRIED BRAZIL BEAN">
+                        </div>
+                        <button class="brazil-bean-button">자세히 보기</button>
+                    </div>
+                </div>
             </div>
-            <div class="right-wrap">
-                <img src="./img/reserve-text.png" alt="리저브가 선사하는 특별한 경험을 온라인 매거진으로 만나보세요">
-                <img src="./img/reserve-text2.png" alt="EXPLORE OUR STORY">
+    
+            <!-- 패럴랙스 -->
+    
+            <div class="c-container">
+                <!-- p 등장 애니메이션 -->
+                <div class="left-wrap">
+                    <img class="c-pick" src="./img/pick-your.png" alt="PICK YOUR FAVORITE">
+                    <img class="c-text" src="./img/fav-text.png" alt="TEXT">
+                    <button class="c-button">자세히 보기</button>
+                </div>
+    
+                <div class="right-wrap">
+                    <img class="c-product" src="./img/fav.png" alt="PRODUCT IMAGE">
+                </div>
+    
+                <img src="" alt="">
             </div>
-
-        </div>
-
-        <div class="find-store">
-            <img src="" alt="">
-
-            <p>Lorem ipsum dolor sit amet.</p>
-            <button>매장 찾기</button>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <ul class="footer-ul">
-            <li><a href="#">COMPANY</a></li>
-
-            <li><a href="#">한눈에 보기</a></li>
-            <li><a href="#">스타벅스 사명</a></li>
-            <li><a href="#">스타벅스 소개</a></li>
-            <li><a href="#">국내 뉴스룸</a></li>
-            <li><a href="#">세계의 스타벅스</a></li>
-            <li><a href="#">글로벌 뉴스룸</a></li>
-        </ul>
-        <ul class="footer-ul">
-            <li><a href="#">CORPORATE SALES</a></li>
-
-            <li><a href="#">단체 및 기업 구매 안내</a></li>
-        </ul>
-        <ul class="footer-ul">
-            <li><a href="#">PARTNERSHIP</a></li>
-
-            <li><a href="#">신규 입점 제의</a></li>
-            <li><a href="#">협력 고객사 등록신청</a></li>
-        </ul>
-        <ul class="footer-ul">
-            <li><a href="#">ONLINE COMMUNITY</a></li>
-
-            <li><a href="#">페이스북</a></li>
-            <li><a href="#">트위터</a></li>
-            <li><a href="#">유튜브</a></li>
-            <li><a href="#">인스타그램</a></li>
-        </ul>
-        <ul class="footer-ul">
-            <li><a href="#">RECRUIT</a></li>
-
-            <li><a href="#">채용 소개</a></li>
-            <li><a href="#">채용 지원하기</a></li>
-        </ul>
-
-        <div class="awards">
-            <img src="" alt=""></img>
-            <img src="" alt=""></img>
-            <img src="" alt=""></img>
-            <img src="" alt=""></img>
-            <img src="" alt=""></img>
-        </div>
-
-        <div class="copyright">
-            <a href="#">개인정보처리방침</a>
-            <a href="#">영상정보처리기기 운영관리 방침</a>
-            <a href="#">홈페이지 이용약관</a>
-            <a href="#">위치정보 이용약관</a>
-            <a href="#">스타벅스 카드 이용약관</a>
-            <a href="#">비회원 이용약관</a>
-            <a href="#">My DT Pass 서비스 이용약관</a>
-            <a href="#">윤리경영 핫라인</a>
-
-            <button>찾아오시는 길</button>
-            <button>신규입점제의</button>
-            <button>사이트 맵</button>
-
-            <ul class="copyright-info">
-                <li>사업자등록번호: 123-45-67890</li>
-                <li>(주)스타벅스커피 코리아 대표이사 : 2424242</li>
-                <li>TEL : 1522-1xxx</li>
-                <li>개인정보 책임자 : xxx</li>
+    
+            <div class="d-container">
+                <!-- 온라인 매거진 ~ 푸터 전까지 -->
+                <div class="left-wrap">
+                    <img src="./img/reserve-visual.png" alt="starbucks reserve">
+                </div>
+                <div class="right-wrap">
+                    <img src="./img/reserve-text.png" alt="리저브가 선사하는 특별한 경험을 온라인 매거진으로 만나보세요">
+                    <img src="./img/reserve-text2.png" alt="EXPLORE OUR STORY">
+                </div>
+    
+            </div>
+    
+            <div class="find-store">
+                <img src="" alt="">
+    
+                <p>Lorem ipsum dolor sit amet.</p>
+                <button>매장 찾기</button>
+            </div>
+        </main>
+    
+        <footer class="footer">
+            <ul class="footer-ul">
+                <li><a href="#">COMPANY</a></li>
+    
+                <li><a href="#">한눈에 보기</a></li>
+                <li><a href="#">스타벅스 사명</a></li>
+                <li><a href="#">스타벅스 소개</a></li>
+                <li><a href="#">국내 뉴스룸</a></li>
+                <li><a href="#">세계의 스타벅스</a></li>
+                <li><a href="#">글로벌 뉴스룸</a></li>
             </ul>
-
-            <span>ⓒ 2021 Pepebucks Coffee Company. All Rights Reserved.</span>
-        </div>
-    </footer>
+            <ul class="footer-ul">
+                <li><a href="#">CORPORATE SALES</a></li>
+    
+                <li><a href="#">단체 및 기업 구매 안내</a></li>
+            </ul>
+            <ul class="footer-ul">
+                <li><a href="#">PARTNERSHIP</a></li>
+    
+                <li><a href="#">신규 입점 제의</a></li>
+                <li><a href="#">협력 고객사 등록신청</a></li>
+            </ul>
+            <ul class="footer-ul">
+                <li><a href="#">ONLINE COMMUNITY</a></li>
+    
+                <li><a href="#">페이스북</a></li>
+                <li><a href="#">트위터</a></li>
+                <li><a href="#">유튜브</a></li>
+                <li><a href="#">인스타그램</a></li>
+            </ul>
+            <ul class="footer-ul">
+                <li><a href="#">RECRUIT</a></li>
+    
+                <li><a href="#">채용 소개</a></li>
+                <li><a href="#">채용 지원하기</a></li>
+            </ul>
+    
+            <div class="awards">
+                <img src="" alt=""></img>
+                <img src="" alt=""></img>
+                <img src="" alt=""></img>
+                <img src="" alt=""></img>
+                <img src="" alt=""></img>
+            </div>
+    
+            <div class="copyright">
+                <a href="#">개인정보처리방침</a>
+                <a href="#">영상정보처리기기 운영관리 방침</a>
+                <a href="#">홈페이지 이용약관</a>
+                <a href="#">위치정보 이용약관</a>
+                <a href="#">스타벅스 카드 이용약관</a>
+                <a href="#">비회원 이용약관</a>
+                <a href="#">My DT Pass 서비스 이용약관</a>
+                <a href="#">윤리경영 핫라인</a>
+    
+                <button>찾아오시는 길</button>
+                <button>신규입점제의</button>
+                <button>사이트 맵</button>
+    
+                <ul class="copyright-info">
+                    <li>사업자등록번호: 123-45-67890</li>
+                    <li>(주)스타벅스커피 코리아 대표이사 : 2424242</li>
+                    <li>TEL : 1522-1xxx</li>
+                    <li>개인정보 책임자 : xxx</li>
+                </ul>
+    
+                <span>ⓒ 2021 Pepebucks Coffee Company. All Rights Reserved.</span>
+            </div>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

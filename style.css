@@ -7,77 +7,108 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    background: transparent;
 }
 
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     font-family: 'Nanum Gothic', sans-serif;
+    overflow-x: hidden;
 }
 
 /* 헤더부분 */
-.header {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    background: #F6F5EF;
-    border-top: 2px solid black;
-    width: 100vw;
-    z-index: 100;
-    height: 20vh;
+.wrap-all::before {
+    content: "";
+    width: 100%;
+    height: 120px;
+    display: block;
+    background-color: #1E3932;
 }
 
-.header .header-wrap a .logo {
+.header {
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: #F6F5EF;
+    z-index: 100;
+    width: 100%;
+    height: 120px;
+    top: 0;
+}
+
+.header .header-wrap .logo {
     cursor: pointer;
     width: 75px;
     height: 75px;
-    margin-left: 1rem;
+}
+
+@media screen and (min-width: 1440px) {
+    .header .header-wrap .logo {
+        margin-right: 5rem;
+    }
 }
 
 .header .header-wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 80vw;
+    width: 100%;
+    height: 100%;
 }
+
 
 .header .nav-wrap {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
+
 
 .sub-nav {
     font-size: 13px;
     display: flex;
     justify-content: center;
-    height: 8vh;
+    height: 60px;
 }
 
 .nav {
-    font-size: 14px;
+    font-size: 13px;
+    height: 50px;
 }
 
 .sub-nav ul, .nav ul {
     display: flex;
-    justify-content: flex-end;
     list-style-type: none;
 }
 
+.sub-nav ul {
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1440px) {
+    .sub-nav ul {
+        margin-right: 35px;
+    }
+}
 
 .sub-nav ul li a, .nav ul li a {
-    padding: 1rem;
+    padding: 1rem; 
     text-decoration: none;
     color: black;
     white-space: nowrap;
 }
 
-.sub-nav ul {
-    align-items: center;
-}
-
 .nav ul li a {
-    padding-bottom: 1.9rem;
+    padding: 1rem 1.5rem;
+    padding-bottom: 2.5rem;
     margin: 0;
 }
 
@@ -119,119 +150,143 @@ body {
     padding-right: 0;
 }
 
-.nav ul li {
-    padding: 0 1rem 0rem 1rem;
-}
-
 .nav ul li:hover a {
     background: var(--charcoal);
     color: olive;
+    text-decoration: underline;
     z-index: 105;
     
 }
 
+.dropdown-container {
+    position:fixed;
+    top: 120px;
+    width: 100%;
+    height: auto;
+}
+
 .nav-dropdown {
-    height: 0;
-    visibility: hidden;
-    transition: 0.3s ease-in-out;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    position: fixed;
-    top: 20vh;
-    width: 100vw;
+    align-items: flex-start; 
+    position: absolute;
+    width: 100%;
     font-size: 12px;
     background: var(--charcoal);
     color: gray;
-    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
 }
 
 .nav-dropdown.active {
     visibility: visible;
-    height: 70%;
+    opacity: 1;
+    height: auto;
 }
 .nav-dropdown.active .dropdown-bottom {
     visibility: visible;
-    height: 17vh;
+    height: auto;
 }
 
-.nav-dropdown .dropdown-bottom {
-    position: fixed;
-    visibility: hidden;
+@media screen and (min-width: 641px) and (max-width: 1120px) {
+    .nav-dropdown.active .dropdown-bottom {
+        padding: 15px 0 40px 0;
+    }
+}
+
+.dropdown-container .dropdown-bottom {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    background-color: var(--deep-green);
-    width: 100vw;
+    align-items: flex-start;
+    width: 100%;
     height: 0;
     bottom: 9.5%;
     z-index: 105;
-    padding-left: 9.5rem;
-    font-size: 12px;
+    margin: 1rem 0 0;
+    padding: 1rem 0;
     line-height: 2px;
+    visibility: hidden;
+    transition: 0.15s linear;
+    background: url('https://www.starbucks.co.kr/common/img/common/gnb_sub_txbg.jpg');
+    transition: 0.3s ease-in-out;
 }
 
 
-.nav-dropdown.active .dropdown-bottom h3 {
+.dropdown-container .dropdown-bottom .wrap {
+    line-height: 18px;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 35px;
+}
+
+.dropdown-container .nav-dropdown.active .dropdown-bottom h3 {
     cursor: pointer;
 }
-.nav-dropdown.active .dropdown-bottom h3:hover {
+.dropdown-container .nav-dropdown.active .dropdown-bottom h3:hover {
     text-decoration: underline;
 }
-.nav-dropdown.active .dropdown-bottom span {
+.dropdown-container .nav-dropdown.active .dropdown-bottom span {
     color:olivedrab;
     margin-bottom: 0.75rem;
 }
 
 
-.dropdown-wrap {
+.dropdown-container .nav-dropdown .dropdown-wrap {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 90vw;
+    width: 100%;
     margin-top: 1.5rem;
 }
 
-.nav-dropdown ul{
+.dropdown-container .nav-dropdown ul{
     list-style-type: none;
     margin: 0rem 2.4rem;
 }
 
-.nav-dropdown ul li:first-child {
+.dropdown-container .nav-dropdown ul li:first-child {
     font-size: 14px;
     font-weight: bold;
     color: #fff;
     margin-bottom: 1rem;
 }
 
-.nav-dropdown ul li {
+.dropdown-container .nav-dropdown ul li {
     cursor: pointer;
     margin: 0.2rem 0rem 0rem;
 }
 
-.nav-dropdown ul li:hover {
+.dropdown-container .nav-dropdown ul li:hover {
     text-decoration: underline;
 }
 
-.hyundai-card {
+.a-container .a-inner .hyundai-card {
     position: fixed;
-    left: auto;
-    right: 5%;
     top: 154px;
-    cursor: pointer;
+    left: 54.5%;
+    width: 140px;
+    margin-left: 485px;
     z-index: 999;
 }
 
 .a-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 646px;
     background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2021/2021_summer1_bg.jpg');
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: -40px 140px;
-    background: 99% cover;
+    background-size: cover;
+}
+
+.a-container .a-inner {
+    display: block;
+    position: relative;
+    max-width: 1080px;
+    height: 100%;
+    margin: 0 auto;
 }
 
 .a-container .beverage-wrap .beverage {
@@ -253,9 +308,11 @@ body {
 }
 
 .a-container .beverage-wrap .beverage.bev2 {
-    left: 56%;
-    bottom: 12%;
-    width: 30%;
+    position: absolute;
+    bottom: 21.3%;
+    left: 58.1%;
+    width: 46%;
+    max-width: 487px;
     animation-delay: 1.5s;
 }
 
@@ -304,30 +361,39 @@ body {
 
 
 .a-container .a-wrap {
-    position: absolute;
-    left: 14%;
-    top: 26%;
+    max-width: 253px;
+    margin-left: -3px;
+    padding-top: 58px;
+
     animation: visibilityAnim 1.5s forwards;
 }
 
-.a-container .a-button {
-    position: absolute;
-    left: 14.5%;
-    bottom: 15%;
-    border: 1px solid black;
+@media screen and (max-width: 1024px) {
+    .a-container .a-wrap {
+        width: 24%;
+        margin-left: 4%;
+    }
+}
+
+.a-container .a-btn {
+    margin-top: 30px;
+    left: 4%;
+    border: 2px solid #595857;
     border-radius: 5px;
-    font-size: 14px;
-    padding: 0.5rem 1.25rem;
-    background-color: transparent;
-    cursor: pointer;
+    width: 125px;
+    height: 38px;
+    text-align: center;
     transition: background-color 0.3s ease-in-out;
-    opacity: 0;
-    animation: visibilityAnim 1.5s forwards;
-    animation-delay: 2.5s;
 }
 
-.a-container .a-button:hover {
+.a-container .a-btn a {
+    color: #595857;
+    text-decoration: none;
+}
+
+.a-container .a-btn:hover {
     background: rgba(255, 255, 255, 0.7);
+    text-decoration: underline;
 }
 
 .a-bottom {
